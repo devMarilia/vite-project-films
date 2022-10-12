@@ -5,13 +5,19 @@ export const NavbarConteiner = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 51, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   .logo {
     font-weight: 700;
     font-size: 21px;
     margin: 15px;
     width: 10px;
-    color: var(--text-color-primary);
+    color: var(--text-color-secondary);
   }
   .nav-items a {
     color: var(--text-color-secondary);
@@ -34,7 +40,7 @@ export const NavbarConteiner = styled.header`
       top: 60px;
       display: flex;
       flex-direction: column;
-      background: var(--color-quaternary);
+      background: var(--color-primary);
       left: 0;
       width: 100%;
       height: 100%;
