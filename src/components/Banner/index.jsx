@@ -1,10 +1,8 @@
-import React from 'react'
-import {Container} from './styled'
+import React from "react";
+import { Container } from "./styled";
 
-const Home = () => {
-  return (
-    <Container>Home</Container>
-  )
-}
+const Banner = () => {
+  return <Container>Banner</Container>;
+};
 
-export default Home
+export default Banner;
