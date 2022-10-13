@@ -1,7 +1,7 @@
-import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import GlobalStyle from "./styles/globalstyles";
-import { Home } from "./pages/Home";
+import { BrowserRouter } from "react-router-dom";
+import MyRoutes from "./router";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <GlobalStyle />
         <Navbar />
-        <Home />
+        <MyRoutes />
       </BrowserRouter>
     </div>
   );
