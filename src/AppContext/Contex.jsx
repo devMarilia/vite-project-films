@@ -4,36 +4,27 @@ import api from "../services/api";
 const AppContext = createContext();
 
 export const useAppContext = () => {
-    return useContext(AppContext);
-}
+  return useContext(AppContext);
+};
 
 export const ContextProvider = ({ children }) => {
-    const [films, setFilms] = useState([]);
+  const [films, setFilms] = useState([]);
 
-    useEffect(()=>{
-        const allItemsFilms = async () => {
-            const response = await api.get("https://api-filmes-1.herokuapp.com/filmes/");
-            const responseArr = Object.values(response.data);
-            setFilms(responseArr || []);
-            console.log("RESPONSE",responseArr);
-        };
-        return allItemsFilms;
-    }, []);
-
-
-  
-
-    const value = {
-        setFilms,
-        films,
+  useEffect(() => {
+    const allItemsFilms = async () => {
+      const response = await api.get("/filmes");
+      const responseArr = Object.values(response.data);
+      setFilms(responseArr || []);
+      console.log("RESPONSE", responseArr);
     };
-    return(
-      <AppContext.Provider value={value}>
-        {children}
-      </AppContext.Provider>
-    )
+    return allItemsFilms;
+  }, []);
+
+  const value = {
+    setFilms,
+    films,
   };
-      
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+};
 
-
- export default AppContext;
+export default AppContext;
