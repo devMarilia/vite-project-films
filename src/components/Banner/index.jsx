@@ -54,7 +54,7 @@ const Banner = () => {
             {index === slider && (
               <div>
                 {slide.image && (
-                  <div>
+                  <div className="imageSlide">
                     <img src={slide.image} alt={slide.name} className="image" />
                     <div className="content">
                       <h2>{slide.name}</h2>

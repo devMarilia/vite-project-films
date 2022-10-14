@@ -6,6 +6,15 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
 
+  .imageSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 .slide {
   position: absolute;
   top: 0;
@@ -30,10 +39,10 @@ export const Container = styled.div`
   object-position: center;
 }
 
-.current {
+/* .current {
   opacity: 1;
   transform: translateX(0);
-}
+} */
 
 .content {
   position: absolute;
