@@ -1,8 +1,74 @@
 import React from "react";
+import { useAppContext } from "../../AppContext/Contex";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Container } from "./styled";
 
+//slider reactjs useAppContext
+
 const Banner = () => {
-  return <Container>Banner</Container>;
+  const { films } = useAppContext();
+  //slider
+  const [slider, setSlider] = React.useState(0);
+  const filmsLength = films.length;
+
+  const autoScroll = true;
+  let slideInterval;
+  let intervalTime = 5000;
+
+  const nextSlide = () => {
+    setSlider(slider === filmsLength - 1 ? 0 : slider + 1);
+    console.log("next");
+  };
+
+  const prevSlide = () => {
+    setSlider(slider === 0 ? filmsLength - 1 : slider - 1);
+    console.log("prev");
+  };
+
+  function auto() {
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  React.useEffect(() => {
+    setSlider(0);
+  }, []);
+
+  React.useEffect(() => {
+    if (autoScroll) {
+      auto();
+    }
+    return () => clearInterval(slideInterval);
+  }, [slider]);
+
+  return (
+    //slider
+    <Container>
+      <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
+      <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+      {films.map((slide, index) => {
+        return (
+          <div
+            className={index === slider ? "slide current" : slide}
+            key={index}
+          >
+            {index === slider && (
+              <div>
+                {slide.image && (
+                  <div>
+                    <img src={slide.image} alt={slide.name} className="image" />
+                    <div className="content">
+                      <h2>{slide.name}</h2>
+                      <p>{slide.description}</p>
+                    </div>
+                  </div>
+                )}
+              </div>   
+            )}
+          </div>
+        );
+      })}
+    </Container>
+  );
 };
 
 export default Banner;
