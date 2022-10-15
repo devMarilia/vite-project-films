@@ -1,12 +1,8 @@
-import React from 'react'
-import { ConatinerLayout } from './styled'
+import React from "react";
+import { ConatinerLayout } from "./styled";
 
-const Layout = ({children}) => {
-  return (
-    <ConatinerLayout>
-        {children}
-    </ConatinerLayout>
-  )
-}
+const Layout = ({ children }) => {
+  return <ConatinerLayout>{children}</ConatinerLayout>;
+};
 
-export default index
+export default index;

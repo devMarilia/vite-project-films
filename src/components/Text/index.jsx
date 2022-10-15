@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import { CorTeste } from "./styled";
 const Text = () => {
   return (
-    <div>Texte</div>
-  )
-}
+    <CorTeste>
+      <div className="Cor">Texte</div>
+    </CorTeste>
+  );
+};
 
-export default Text
+export default Text;

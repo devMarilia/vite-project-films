@@ -1,13 +1,19 @@
 import React from "react";
+import { useAppContext } from "../../AppContext/Contex";
+import { Cardss } from "./styled";
 
 const Card = () => {
+  const { films } = useAppContext();
   return (
-    //card
-    <div className="card">
-      <div className="card-header">
-        <h3 className="card-title">Card</h3>
-      </div>
-    </div>
+    <Cardss>
+      {films.map((film) => {
+        return (
+          <div className="card">
+            <img src={film.image} alt="" className="image" />
+          </div>
+        );
+      })}
+    </Cardss>
   );
 };
 

@@ -9,7 +9,15 @@ function Home() {
     <div>
       <Banner />
       <ConatinerLayout>
-        <Text/>
+        <Text />
+        <Card />
+      </ConatinerLayout>
+      <ConatinerLayout>
+        <Text />
+        <Card />
+      </ConatinerLayout>
+      <ConatinerLayout>
+        <Text />
         <Card />
       </ConatinerLayout>
     </div>
