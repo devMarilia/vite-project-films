@@ -17,7 +17,7 @@ export const Cards = styled.div`
     transition: all 0.3s ease-out;
     background: center;
     margin: 2px;
-    max-height: 184px;
+    max-height: 128px;
   }
 
   .image:hover {
