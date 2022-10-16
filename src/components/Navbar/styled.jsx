@@ -5,17 +5,17 @@ export const NavbarConteiner = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+    height: 2.4rem;
   background: var(--color-navbar);
   .logo {
     font-weight: 700;
-    font-size: 21px;
     margin: 15px;
-    width: 10px;
     color: var(--text-color-primary);
   }
   .nav-items a {
     color: var(--text-color-primary);
-    font-size: 16px;
+    font-size: 0.75rem;
     text-decoration: none;
     margin: 15px;
     position: relative;
@@ -35,7 +35,7 @@ export const NavbarConteiner = styled.header`
 
     .nav-items {
       position: absolute;
-      top: 78px;
+      top: 35px;
       display: flex;
       flex-direction: column;
       background: var(--background-mobile-menu);
