@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Ignore arquivos relacionados às chaves de API
-.env
+*.env
