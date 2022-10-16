@@ -10,16 +10,7 @@ function Home() {
       <Banner />
       <ConatinerLayout>
         <Card/>
-      </ConatinerLayout>
-      {/* <ConatinerLayout>
-        <Text>Novidades</Text>
-        <Card />
-      </ConatinerLayout>
-      <ConatinerLayout>
-        <Text>Dia das Crianças</Text>
-        <Card />
-      </ConatinerLayout> */}
-      
+      </ConatinerLayout>     
     </div>
   );
 }
