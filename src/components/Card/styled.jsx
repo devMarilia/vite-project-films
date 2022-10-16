@@ -15,11 +15,13 @@ export const Cards = styled.div`
     border-radius: 10px;
     -webkit-transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background: center;
-    margin: 3px;
+    margin: 7px;
+    margin-left: -1px;
     max-height: 170px;
-    margin-bottom: 22px;
+    margin-bottom: 15px;
   }
 
   .image:hover {
