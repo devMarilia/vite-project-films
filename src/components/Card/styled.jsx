@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const Cardss = styled.div`
+export const Cards = styled.div`
   display: flex;
 
-  .card {
-  }
+
 
   .image {
     background: #fff;

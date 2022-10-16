@@ -1,31 +1,28 @@
 import styled from "styled-components";
 
 export const NavbarConteiner = styled.header`
-  height: 60px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 51, 121, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: var(--color-navbar);
   .logo {
     font-weight: 700;
     font-size: 21px;
     margin: 15px;
     width: 10px;
-    color: var(--text-color-secondary);
+    color: var(--text-color-primary);
   }
   .nav-items a {
-    color: var(--text-color-secondary);
+    color: var(--text-color-primary);
     font-size: 16px;
     text-decoration: none;
     margin: 15px;
     position: relative;
     opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
   }
   .nav-items a:hover {
     opacity: 1;
@@ -35,17 +32,30 @@ export const NavbarConteiner = styled.header`
   }
   @media (max-width: 700px) {
     border-bottom: 100%;
+
     .nav-items {
       position: absolute;
-      top: 60px;
+      top: 78px;
       display: flex;
       flex-direction: column;
-      background: var(--color-primary);
+      background: var(--background-mobile-menu);
+      backdrop-filter: blur(10px);
+      opacity: 0.9;
       left: 0;
       width: 100%;
       height: 100%;
       transform: translateX(-100%);
       transition: all 0.45s;
+      z-index: 1 ;
+    }
+    .nav-items a {
+      align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color-primary) ;
+    opacity: .9;
+
     }
     nav-items > a::before {
       background: transparent;
