@@ -9,17 +9,17 @@ function Home() {
     <div>
       <Banner />
       <ConatinerLayout>
+        <Card/>
+      </ConatinerLayout>
+      {/* <ConatinerLayout>
         <Text>Novidades</Text>
         <Card />
       </ConatinerLayout>
       <ConatinerLayout>
         <Text>Dia das Crianças</Text>
         <Card />
-      </ConatinerLayout>
-      <ConatinerLayout>
-        <Text>Top 10</Text>
-        <Card />
-      </ConatinerLayout>
+      </ConatinerLayout> */}
+      
     </div>
   );
 }

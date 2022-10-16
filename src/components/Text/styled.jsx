@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const ContainerText = styled.div`
 
     h2 {
@@ -10,7 +12,8 @@ export const ContainerText = styled.div`
       border-bottom: 1px solid;
       padding-bottom: 0.8rem;
       border-radius: 119px 34px/8px 1px;
-      width: 10rem ;
+      width: 7rem ;
+      font-size: 1rem;
     }
 
     
