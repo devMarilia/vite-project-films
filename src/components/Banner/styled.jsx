@@ -88,13 +88,11 @@ export const Container = styled.div`
   }
 
   .arrow {
-    border: 2px solid white;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
     height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
+    width: 25px;
     position: absolute;
     z-index: 999;
   }
@@ -104,11 +102,11 @@ export const Container = styled.div`
   }
 
   .next {
-    top: 35%;
+    top: 47%;
     right: 1.5rem;
   }
   .prev {
-    top: 35%;
+    top: 47%;
     left: 1.5rem;
   }
 
