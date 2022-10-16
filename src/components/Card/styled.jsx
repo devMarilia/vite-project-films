@@ -14,11 +14,12 @@ export const Cards = styled.div`
     background: #fff;
     border-radius: 10px;
     -webkit-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background: center;
-    margin: 2px;
-    max-height: 128px;
-    margin-bottom: 30px;
+    margin: 3px;
+    max-height: 170px;
+    margin-bottom: 22px;
   }
 
   .image:hover {

@@ -5,7 +5,7 @@ export const NavbarConteiner = styled.header`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  height: 2.4rem;
+  height: 50px;
   background: var(--color-navbar);
 
   .logo {

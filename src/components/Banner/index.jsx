@@ -58,6 +58,7 @@ const Banner = () => {
                     <img src={slide.image} alt={slide.name} className="image" />
                     <div className="content">
                       <h2>{slide.name}</h2>
+                      <p>{slide.description}</p>
                     </div>
                   </div>
                 )}
