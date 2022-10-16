@@ -1,5 +1,6 @@
 import React from "react";
 import { useAppContext } from "../../AppContext/Contex";
+import FeaturedBanner from "../FeaturedBanner";
 import Text from "../Text" 
 import { ContainerCard, Cards } from "./styled";
 
@@ -37,7 +38,7 @@ const Card = () => {
         );
       })}
     </Cards>
-    
+    <FeaturedBanner/>
     </ContainerCard>
   );
 };
