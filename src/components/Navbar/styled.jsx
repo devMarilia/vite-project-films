@@ -4,7 +4,7 @@ export const NavbarConteiner = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 15px 0px 0;
+  margin: 0 auto;
   height: 2.4rem;
   background: var(--color-navbar);
 
@@ -12,6 +12,10 @@ export const NavbarConteiner = styled.header`
     font-weight: 700;
     margin: 15px;
     color: var(--text-color-primary);
+  }
+
+  .nav-items {
+    margin: 26px;
   }
 
   .nav-items a {
