@@ -1,9 +1,9 @@
 import React from "react";
 import { ContainerText } from "./styled";
-const Text = () => {
+const Text = ({children}) => {
   return (
     <ContainerText>
-      <div>Texte</div>
+      <h2>{children}</h2>
     </ContainerText>
   );
 };
