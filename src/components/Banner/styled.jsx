@@ -17,7 +17,7 @@ export const Container = styled.div`
   }
 .slide {
   position: absolute;
-  top: 0;
+  top: -5;
   left: 0;
   width: 100%;
   height: 100%;
@@ -37,22 +37,24 @@ export const Container = styled.div`
   height: 100%;
   object-fit: cover;
   object-position: center;
+ 
 }
 
-/* .current {
+.current {
   opacity: 1;
   transform: translateX(0);
-} */
+}
 
 .content {
   position: absolute;
-  top: 23rem;
+  margin-top: -5rem;
   left: 5rem;
+  width: 20% ;
   opacity: 0;
-  width: 50%;
+ 
+
   color: #fff;
-  padding: 3rem;
-  background: rgba(0, 0, 0, 0.3);
+ 
   animation: slide-up 1s ease 0.5s;
    animation-delay: 1s;
   animation-fill-mode: forwards;
