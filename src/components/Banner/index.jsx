@@ -6,22 +6,22 @@ import { Container } from "./styled";
 //slider reactjs useAppContext
 
 const Banner = () => {
-  const { films } = useAppContext();
+  const { banner } = useAppContext();
   //slider
   const [slider, setSlider] = React.useState(0);
-  const filmsLength = films.length;
+  const bannerLength = banner.length;
 
   const autoScroll = true;
   let slideInterval;
   let intervalTime = 5000;
 
   const nextSlide = () => {
-    setSlider(slider === filmsLength - 1 ? 0 : slider + 1);
+    setSlider(slider === bannerLength - 1 ? 0 : slider + 1);
     console.log("next");
   };
 
   const prevSlide = () => {
-    setSlider(slider === 0 ? filmsLength - 1 : slider - 1);
+    setSlider(slider === 0 ? bannerLength - 1 : slider - 1);
     console.log("prev");
   };
 
@@ -45,7 +45,7 @@ const Banner = () => {
     <Container>
       <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
       <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
-      {films.map((slide, index) => {
+      {banner.map((slide, index) => {
         return (
           <div
             className={index === slider ? "slide current" : slide}
@@ -58,10 +58,10 @@ const Banner = () => {
                     <img src={slide.image} alt={slide.name} className="image" />
                     <div className="content">
                       <h2>{slide.name}</h2>
-                    </div> 
+                    </div>
                   </div>
                 )}
-              </div>   
+              </div>
             )}
           </div>
         );

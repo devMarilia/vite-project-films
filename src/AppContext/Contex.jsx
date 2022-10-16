@@ -9,11 +9,18 @@ export const useAppContext = () => {
 
 export const ContextProvider = ({ children }) => {
   // Todos os States com dados das API'S
+  const [banner, setBanner] = useState([]);
   const [films, setFilms] = useState([]);
   const [filmsComedia, setFilmsComedia] = useState([]);
 
   // Parte de consumo de API'S
   async function getAll() {
+    await api
+      .get("/banner")
+      .then((res) => setBanner(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
     await api
       .get("/filmes")
       .then((res) => setFilms(res.data))
@@ -33,6 +40,7 @@ export const ContextProvider = ({ children }) => {
   }, []);
 
   const value = {
+    banner,
     films,
     filmsComedia,
   };
