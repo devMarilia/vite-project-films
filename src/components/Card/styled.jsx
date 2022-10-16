@@ -18,6 +18,7 @@ export const Cards = styled.div`
     background: center;
     margin: 2px;
     max-height: 128px;
+    margin-bottom: 30px;
   }
 
   .image:hover {
