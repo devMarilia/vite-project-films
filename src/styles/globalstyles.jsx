@@ -11,14 +11,16 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     overflow: overlay;
+    background: #16041b
   }
  
   #root {
     --color-primary: #fff ;
-    --color-secondary: red;
-    --text-color-primary: #e50914;
+    --color-navbar: #66127d;
+    --text-color-primary: #fafafa;
     --text-color-secondary: #565656;
     --text-color-tertiary: #000000;
+    --background-mobile-menu: rgb(105,105,105);
     --background-color-footer: #901742;
     --fonte-principal: Open-Sans, Helvetica, Sans-Serif;
   }

@@ -1,11 +1,11 @@
 import React from "react";
 import { useAppContext } from "../../AppContext/Contex";
-import { Cardss } from "./styled";
+import { Cards } from "./styled";
 
 const Card = () => {
   const { films } = useAppContext();
   return (
-    <Cardss>
+    <Cards>
       {films.map((film) => {
         return (
           <div className="card">
@@ -13,7 +13,7 @@ const Card = () => {
           </div>
         );
       })}
-    </Cardss>
+    </Cards>
   );
 };
 

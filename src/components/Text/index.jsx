@@ -1,10 +1,10 @@
 import React from "react";
-import { CorTeste } from "./styled";
+import { ContainerText } from "./styled";
 const Text = () => {
   return (
-    <CorTeste>
-      <div className="Cor">Texte</div>
-    </CorTeste>
+    <ContainerText>
+      <div>Texte</div>
+    </ContainerText>
   );
 };
 
