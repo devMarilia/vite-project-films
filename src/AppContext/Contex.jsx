@@ -8,21 +8,41 @@ export const useAppContext = () => {
 };
 
 export const ContextProvider = ({ children }) => {
+  // Todos os States com dados das API'S
+  const [banner, setBanner] = useState([]);
   const [films, setFilms] = useState([]);
+  const [filmsComedia, setFilmsComedia] = useState([]);
+
+  // Parte de consumo de API'S
+  async function getAll() {
+    await api
+      .get("/banner")
+      .then((res) => setBanner(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get("/filmes")
+      .then((res) => setFilms(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get(`/comedia`)
+      .then((res) => setFilmsComedia(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+  }
 
   useEffect(() => {
-    const allItemsFilms = async () => {
-      const response = await api.get("/filmes");
-      const responseArr = Object.values(response.data);
-      setFilms(responseArr || []);
-      console.log("RESPONSE", responseArr);
-    };
-    return allItemsFilms;
+    getAll();
   }, []);
 
   const value = {
-    setFilms,
+    banner,
     films,
+    filmsComedia,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
