@@ -57,7 +57,7 @@ const Card = () => {
         </div>
       </Cards>
 
-      <FeaturedBanner />
+      {/* <FeaturedBanner /> */}
       
       <Text>Comédia</Text>
       <Cards>
