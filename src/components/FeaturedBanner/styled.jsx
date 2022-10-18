@@ -15,7 +15,7 @@ export const ContainerFeaturedBanner = styled.div`
   }
 
   img {
-    width: 111rem;
+    width: 100rem;
     height: 100%;
     object-fit: contain;
     object-position: center;
