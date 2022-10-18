@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import GlobalStyle from "./styles/globalstyles";
 import { BrowserRouter } from "react-router-dom";
 import MyRoutes from "./router";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <GlobalStyle />
         <Navbar />
         <MyRoutes />
+        <Footer/>
       </BrowserRouter>
     </div>
   );
