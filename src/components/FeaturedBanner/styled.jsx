@@ -15,23 +15,17 @@ export const ContainerFeaturedBanner = styled.div`
   }
 
   img {
-    width: 45rem;
+    width: 111rem;
     height: 100%;
     object-fit: contain;
     object-position: center;
-
-  
   }
 
-
   @media (max-width: 700px) {
-
     height: 23vh;
 
     img {
-      width: 21rem;
+      width: 34rem;
     }
   }
-  
-
 `;
