@@ -32,10 +32,10 @@ export const Cards = styled.div`
     transition: 0.3s all ease-in-out;
   }
 
-  .image:hover {
+  /* .image:hover {
     cursor: pointer;
     transform: scale(1.2);
-  }
+  } */
 `;
 
 export const Scroll = styled.div`
@@ -47,20 +47,32 @@ export const Scroll = styled.div`
     width: 25px;
     position: absolute;
     z-index: 999;
+    
+   
   }
 
   .arrow:hover {
-    background-color: #fff;
+    /* background-color: #fff;
     color: #777;
+    height: 11.4rem; */
+    
   }
 
   .next {
-    top: 89%;
     right: 1.5rem;
+    top: 26.5rem;
   }
 
   .prev {
-    top: 89%;
-    left: 0.5rem;
+    top: 26.5rem;
+  } 
+  @media (max-width: 700px) {
+    .next {
+      top: 35.5rem;
+    }
+
+    .prev {
+      top: 35.5rem;
+    } 
   }
 `;

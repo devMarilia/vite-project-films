@@ -43,15 +43,15 @@ export const NavbarConteiner = styled.header`
 
     .nav-items {
       position: absolute;
-      top: 35px;
+      top: 24px;
       display: flex;
       flex-direction: column;
       background: var(--background-mobile-menu);
       backdrop-filter: blur(10px);
       opacity: 0.9;
-      left: 0;
+      left: -29px;
       width: 100%;
-      height: 100%;
+      height: 67%;
       transform: translateX(-100%);
       transition: all 0.45s;
       z-index: 1;

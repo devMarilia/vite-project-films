@@ -19,5 +19,19 @@ export const ContainerFeaturedBanner = styled.div`
     height: 100%;
     object-fit: contain;
     object-position: center;
+
+  
   }
+
+
+  @media (max-width: 700px) {
+
+    height: 23vh;
+
+    img {
+      width: 21rem;
+    }
+  }
+  
+
 `;

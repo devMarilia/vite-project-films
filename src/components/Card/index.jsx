@@ -42,6 +42,10 @@ const Card = () => {
 
       <Text>Top 10</Text>
       <Cards>
+      <Scroll>
+          <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
+          <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+        </Scroll>
         <div className="card" ref={a}>
           {films.map((film) => {
             return (
@@ -53,6 +57,8 @@ const Card = () => {
         </div>
       </Cards>
 
+      <FeaturedBanner />
+      
       <Text>Comédia</Text>
       <Cards>
         <div className="card" ref={b}>
@@ -65,7 +71,7 @@ const Card = () => {
           })}
         </div>
       </Cards>
-      <FeaturedBanner />
+   
     </ContainerCard>
   );
 };

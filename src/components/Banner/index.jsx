@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppContext } from "../../AppContext/Contex";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+// import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Container } from "./styled";
 
 //slider reactjs useAppContext
@@ -43,8 +43,8 @@ const Banner = () => {
   return (
     //slider
     <Container>
-      <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-      <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+      {/* <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
+      <AiOutlineArrowRight className="arrow next" onClick={nextSlide} /> */}
       {banner.map((slide, index) => {
         return (
           <div
@@ -56,10 +56,10 @@ const Banner = () => {
                 {slide.image && (
                   <div className="imageSlide">
                     <img src={slide.image} alt={slide.name} className="image" />
-                    <div className="content">
+                    {/* <div className="content">
                       <h2>{slide.name}</h2>
                       <p>{slide.description}</p>
-                    </div>
+                    </div> */}
                   </div>
                 )}
               </div>
