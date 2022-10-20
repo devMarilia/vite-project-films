@@ -1,36 +1,49 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useAppContext } from "../../AppContext/Contex";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import FeaturedBanner from "../FeaturedBanner";
+// import FeaturedBanner from "../FeaturedBanner";
 import Text from "../Text";
-import { ContainerCard, Cards, Scroll } from "./styled";
+import { MovieRow} from "./styled";
 
 const Card = () => {
-  const { films, filmsComedia } = useAppContext();
-  const scroll = useRef(null);
-  const a = useRef(null);
-  const b = useRef(null);
+  const { films } = useAppContext();
+  const ref = React.useRef(null);
 
-  const nextSlide = (e) => {
-    e.preventDefault();
-    scroll.current.scrollLeft += scroll.current.offsetWidth;
+  const [scrollX, setScrollX] = React.useState(0);
+
+  const handleLeftArrow = () => {
+    let x = scrollX + Math.round(window.innerWidth / 2);
+    if (x > 0) {
+      x = 0;
+    }
+    setScrollX(x);
   };
-
-  const prevSlide = (e) => {
-    e.preventDefault();
-    scroll.current.scrollLeft -= scroll.current.offsetWidth;
+  const handleRightArrow = () => {
+    let x = scrollX - Math.round(window.innerWidth / 2);
+    let listW = films.length * 150;
+    if (window.innerWidth - listW > x) {
+      x = window.innerWidth - listW - 60;
+    }
+    setScrollX(x);
   };
-
   return (
-    <ContainerCard>
-      <Text>Novidades</Text>
-      <Cards>
-        <Scroll>
-          <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-          <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
-        </Scroll>
-        <div className="card" ref={scroll}>
-          {films.map((film) => {
+    <MovieRow>
+      <div className="movieRow-left" onClick={handleLeftArrow}>
+        <AiOutlineArrowLeft  />
+      </div>
+      <div className="movieRow-right" onClick={handleRightArrow}>
+        <AiOutlineArrowRight  />
+      </div>
+
+      <div className="movieRow-listarea">
+        <div
+          className="movieRow-list"
+          style={{
+            marginLeft: scrollX,
+            width: films.length * 150,
+          }}
+        >
+         {films.map((film) => {
             return (
               <div key={film.id}>
                 <img src={film.image} alt="" className="image" />
@@ -38,41 +51,8 @@ const Card = () => {
             );
           })}
         </div>
-      </Cards>
-
-      <Text>Top 10</Text>
-      <Cards>
-      <Scroll>
-          <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-          <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
-        </Scroll>
-        <div className="card" ref={a}>
-          {films.map((film) => {
-            return (
-              <div>
-                <img src={film.image} alt="" className="image" />
-              </div>
-            );
-          })}
         </div>
-      </Cards>
-
-      {/* <FeaturedBanner /> */}
-      
-      <Text>Comédia</Text>
-      <Cards>
-        <div className="card" ref={b}>
-          {filmsComedia.map((film) => {
-            return (
-              <div>
-                <img src={film.image} alt="" className="image" />
-              </div>
-            );
-          })}
-        </div>
-      </Cards>
-   
-    </ContainerCard>
+      </MovieRow>
   );
 };
 

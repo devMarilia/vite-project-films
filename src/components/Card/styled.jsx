@@ -1,78 +1,121 @@
 import styled from "styled-components";
 
-export const ContainerCard = styled.div`
+export const MovieRow = styled.div`
+  margin-bottom: 30px;
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-`;
+    align-items: center;
+    justify-content: center;
 
-export const Cards = styled.div`
-  display: flex;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 
-  .card {
+  .movieRow-listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    flex-direction: column;
+    justify-content: space-between;
   }
-
-  .card::-webkit-scrollbar {
-    display: none;
-  }
-
-  .image {
-    background: #fff;
-    border-radius: 3px;
-    object-fit: cover;
-    background: center;
-    margin: 7px;
-    margin-left: -1px;
-    max-height: 180px;
-    margin-bottom: 15px;
-    transition: 0.3s all ease-in-out;
-  }
-
-  /* .image:hover {
+  .movieRow-item{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
     cursor: pointer;
-    transform: scale(1.2);
-  } */
-`;
+}
+.image {
+  width: 150px;
+  height: 100%;
+  border-radius: 3px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+}
 
-export const Scroll = styled.div`
-  .arrow {
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    height: 2rem;
-    width: 25px;
-    position: absolute;
-    z-index: 999;
-    
-   
-  }
+.movieRow-item img{
+   width: 100%;
+   transform: scale(0.9);
+   transition : all ease 0.2s;
+}
 
-  .arrow:hover {
-    /* background-color: #fff;
-    color: #777;
-    height: 11.4rem; */
-    
-  }
+.movieRow-list {
+    transition : all ease 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .next {
-    right: 1.5rem;
-    top: 26.5rem;
-  }
+}
 
-  .prev {
-    top: 26.5rem;
-  } 
-  @media (max-width: 700px) {
-    .next {
-      top: 35.5rem;
+
+
+
+
+
+.movieRow-item img:hover{
+    transform: scale(1);
+ }
+
+
+ .movieRow-right {
+    position:absolute;   
+    width: 40px;
+    height: 225px;
+    background-color:rgba(0,0,0,0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor:pointer;
+    /* opacity: 0; */
+    transition : all ease 0.2s;
+}
+.movieRow-left {
+    position:absolute;   
+    width: 40px;
+    height: 225px;
+    background-color:rgba(0,0,0,0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor:pointer;
+    /* opacity: 0; */
+    transition : all ease 0.2s;
+}
+
+ .movieRow-left{
+     left: 0;
+ }
+
+ .movieRow-right{
+    right: 0;
+}
+
+.movieRow:hover .movieRow-left:hover
+{
+    opacity: 1;
+}
+
+  /* .movieRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+
+
+
+
+
+@media (max-width: 760px){
+    .movieRow-left,
+    .movieRow-right {
+    opacity: 1;
     }
-
-    .prev {
-      top: 35.5rem;
-    } 
-  }
+} */
 `;
