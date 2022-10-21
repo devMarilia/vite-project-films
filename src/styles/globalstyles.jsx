@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     overflow: overlay;
-    background: #16041b
+    background: #000000
   }
  
   #root {
@@ -40,6 +40,5 @@ const GlobalStyle = createGlobalStyle`
   }
     
 `;
-
 
 export default GlobalStyle;

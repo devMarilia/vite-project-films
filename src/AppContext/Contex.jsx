@@ -35,14 +35,24 @@ export const ContextProvider = ({ children }) => {
       });
   }
 
+  const lis = [
+    {
+      title: "Novidades",
+      items: films,
+    },
+    {
+      title: "Comédia",
+      items: filmsComedia,
+    },
+  ];
+
   useEffect(() => {
     getAll();
   }, []);
 
   const value = {
     banner,
-    films,
-    filmsComedia,
+    lis,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
