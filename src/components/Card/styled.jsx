@@ -1,78 +1,80 @@
 import styled from "styled-components";
 
-export const ContainerCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-`;
+export const MovieRow = styled.div`
+  margin-bottom: 12px;
 
-export const Cards = styled.div`
-  display: flex;
-
-  .card {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+  .movieRow-listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
   }
 
-  .card::-webkit-scrollbar {
-    display: none;
+  .movieRow-list {
+    transition: all ease 0.2s;
   }
 
-  .image {
-    background: #fff;
-    border-radius: 3px;
-    object-fit: cover;
-    background: center;
-    margin: 7px;
-    margin-left: -1px;
-    max-height: 180px;
-    margin-bottom: 15px;
-    transition: 0.3s all ease-in-out;
-  }
-
-  /* .image:hover {
+  .movieRow-item {
+    display: inline-block;
+    width: 150px;
     cursor: pointer;
-    transform: scale(1.2);
-  } */
-`;
+    margin-left: -8px;
+  }
 
-export const Scroll = styled.div`
-  .arrow {
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    height: 2rem;
-    width: 25px;
+  .movieRow-item img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+  }
+
+  .movieRow-item img:hover {
+    transform: scale(1);
+  }
+
+  .movieRow-left,
+  .movieRow-right {
     position: absolute;
-    z-index: 999;
-    
-   
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.2s;
   }
 
-  .arrow:hover {
-    /* background-color: #fff;
-    color: #777;
-    height: 11.4rem; */
-    
+  .movieRow-left {
+    left: 0;
   }
 
-  .next {
-    right: 1.5rem;
-    top: 26.5rem;
+  .movieRow-right {
+    right: 0;
   }
 
-  .prev {
-    top: 26.5rem;
-  } 
-  @media (max-width: 700px) {
-    .next {
-      top: 35.5rem;
+  .movieRow:hover .movieRow-left,
+  .movieRow:hover .movieRow-right {
+    opacity: 1;
+  }
+
+  .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: #191f26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 760px) {
+    .movieRow-left,
+    .movieRow-right {
+      opacity: 1;
     }
-
-    .prev {
-      top: 35.5rem;
-    } 
   }
 `;
