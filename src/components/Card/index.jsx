@@ -52,6 +52,8 @@ const Card = () => {
           })}
         </div>
         </div>
+
+        
       </MovieRow>
   );
 };
