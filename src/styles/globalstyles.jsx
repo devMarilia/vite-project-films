@@ -9,21 +9,23 @@ const GlobalStyle = createGlobalStyle`
     font-family: Open-Sans, Helvetica, Sans-Serif;
     
   }
-  body {
-    overflow: overlay;
-    background: #16041b
-  }
- 
+
+   
   #root {
     --color-primary: #fff ;
     --color-navbar: #66127d;
     --text-color-primary: #fafafa;
-    --text-color-secondary: #565656;
+    --text-color-secondary: grey;
     --text-color-tertiary: #000000;
     --background-mobile-menu: rgb(105,105,105);
-    --background-color-footer: #901742;
+    --background-primary: #141414;
     --fonte-principal: Open-Sans, Helvetica, Sans-Serif;
   }
+  body {
+    overflow: overlay;
+    background: #141414;
+  }
+
   
     a {
     text-decoration: none;
@@ -40,6 +42,5 @@ const GlobalStyle = createGlobalStyle`
   }
     
 `;
-
 
 export default GlobalStyle;
