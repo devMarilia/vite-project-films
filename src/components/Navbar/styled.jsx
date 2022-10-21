@@ -6,7 +6,7 @@ export const NavbarConteiner = styled.header`
   align-items: center;
   margin: 0 auto;
   height: 50px;
-  background: var(--color-navbar);
+  background: var(--background-primary);
 
   .logo {
     font-weight: 700;
@@ -46,7 +46,7 @@ export const NavbarConteiner = styled.header`
       top: 24px;
       display: flex;
       flex-direction: column;
-      background: var(--background-mobile-menu);
+      background: var(--background-primary);
       backdrop-filter: blur(10px);
       opacity: 0.9;
       left: -29px;
