@@ -40,6 +40,37 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     }
   }
+  .card-container {
+    
+    background: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+    
+  flex-wrap: wrap;
+}
+.conntent {
+  width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.card-container .card {
+  border: solid 1px #f2f2f2;
+  margin: 5px;
+}
+
+.card-container .card .card-body {
+  padding: 10px;
+}
+
+.card-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
     
 `;
 

@@ -53,6 +53,7 @@ export const ContextProvider = ({ children }) => {
   const value = {
     banner,
     lis,
+    filmsComedia,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
