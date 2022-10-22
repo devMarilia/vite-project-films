@@ -6,6 +6,7 @@ import Text from "../components/Text";
 
 function Comedy() {
   const { filmsComedia } = useAppContext();
+  console.log(filmsComedia)
 
   return (
     <div className="container-pages">
@@ -13,23 +14,23 @@ function Comedy() {
         <Text>Comedia</Text>
         <span> 100 Filmes</span>
       </section>
-      <div class="content-card-pages">
-        {filmsComedia.map((item, index) => {
+      <div className="content-card-pages">
+        {filmsComedia.map((item, key) => {
           return (
             <React.Fragment>
-              <div class="content">
-                <div class="card">
-                  <img src={item.image} alt={item.nome} class="card-img" />
+              <div className="content" key={item.id}>
+                <div className="card" >
+                  <img src={item.image} alt={item.nome} className="card-img"/>
                 </div>
                 <div className="description-page">
-                  <div class="caption">
+                  <div className="caption">
                   <h3 >
                     {item.name}
                   </h3>
                   <span>10/15/2022</span>
                   </div>
                   
-                 <div class="caption">
+                 <div className="caption">
                   <article>{item.description}</article>
                  </div>
                 </div>
