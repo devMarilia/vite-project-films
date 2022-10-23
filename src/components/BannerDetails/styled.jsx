@@ -15,13 +15,13 @@ export const ContainerBannerDetails = styled.div`
 
     .content-datails-items-image {
       display: block;
-      min-width: 150px;
+      min-width: 18rem;
       border-radius: 2px;
       position: relative;
       top: 0;
       left: 0;
       background-color: blue;
-      height: 235px;
+      height: 29rem;
 
       .image-details {
         height: 100%;
