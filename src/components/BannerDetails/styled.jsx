@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerBannerDetails = styled.div`
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ export const ContainerBannerDetails = styled.div`
       display: block;
       min-width: 150px;
       width: 150px;
-      height: 200px;
+      height: 220px;
       border-radius: 2px;
       position: relative;
       top: 0;
