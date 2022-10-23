@@ -102,7 +102,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .card-img {
-  height: 141px;
+  height: 100%;
     width: 103px;
     object-fit: cover;
     display: flex;
