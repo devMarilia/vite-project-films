@@ -38,7 +38,6 @@ export const ContainerBannerDetails = styled.div`
 
 
       .items-datails {
-        height: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -55,16 +54,30 @@ export const ContainerBannerDetails = styled.div`
     justify-content: center;
     display: flex;
     align-items: center ;
+
+  
  
     .content-datails  {
       flex-direction: column ;  
 
+      .content-datails-items {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 19px;
+      }
+
       .content-datails-items-image {
         justify-content: center;
-    display: flex;
-    align-items: center ;
+        display: flex;
+        align-items: center ;
       }
     }
+  
   }
+  .content-datails-items .items-datails > h3 { 
+      font-size: 1rem ;
+    }
    
 `;
