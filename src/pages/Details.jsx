@@ -1,11 +1,12 @@
 import React from 'react'
+import BannerDetils from '../components/BannerDetails'
 
 const Details = () => {
   return (
-   <div>
-     <div>Banner</div>
+   <>
+     <BannerDetils/>
     <div>Elencos</div>
-   </div>
+   </>
   )
 }
 
