@@ -2,6 +2,7 @@ import React from "react";
 import { ContainerBannerDetails } from "./styled";
 
 const BannerDetils = ({ dados }) => {
+  console.log(dados);
   return (
     <ContainerBannerDetails>
       <div className="content-datails">
