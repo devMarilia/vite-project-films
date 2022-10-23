@@ -8,8 +8,6 @@ const Details = () => {
   // Todos os States com dados das API'S
   const [banner, setBanner] = useState([]);
   const [films, setFilms] = useState([]);
-  const [filmsComedia, setFilmsComedia] = useState([]);
-  const [documentario, setDocumentario] = useState([]);
 
   // Parte de consumo de API'S
   async function getAll() {
@@ -21,8 +19,16 @@ const Details = () => {
           console.error("ops! ocorreu um erro " + error);
         });
     }
+    if (id >= 201) {
+      await api
+        .get(`/comedia/${id}`)
+        .then((res) => setFilms(res.data))
+        .catch((error) => {
+          console.error("ops! ocorreu um erro " + error);
+        });
+    }
   }
-  console.log(films);
+  //console.log(films);
   useEffect(() => {
     getAll();
   }, [id]);
