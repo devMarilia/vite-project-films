@@ -4,6 +4,7 @@ export const ContainerBannerDetails = styled.div`
   width: 100%;
   height: 84vh;
   display: flex;
+  flex-direction: column ;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid var(--background-mobile-menu);
@@ -35,6 +36,18 @@ export const ContainerBannerDetails = styled.div`
       display: flex;
       align-items: center;
       color: #fff;
+
+
+      .items-datails {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > h3 {
+          font-size: 2rem ;
+        }
+      }
     }
   }
 `;

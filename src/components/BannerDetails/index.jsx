@@ -10,7 +10,7 @@ const BannerDetils = ({ dados }) => {
           <img className="image-details" src={dados.image} />
         </div>
         <div className="content-datails-items">
-          <div>
+          <div className="items-datails">
             <h3>{dados.name}</h3>
             <span>10/15/2022</span>
             <h3>Sinopse</h3>
