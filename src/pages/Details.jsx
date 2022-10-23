@@ -36,7 +36,6 @@ const Details = () => {
   return (
     <>
       <BannerDetils dados={films} />
-      <div>Elencos</div>
     </>
   );
 };
