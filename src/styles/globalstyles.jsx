@@ -80,18 +80,18 @@ const GlobalStyle = createGlobalStyle`
   display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: #fff;
+    background: #fff;  
     padding: 3px ;
 
    h3 {
       font-size: 1rem;
     }
   article {
-      font-size: 0.65rem;
+      font-size: 13px;
     }
 
    span {
-      font-size: 0.5rem;
+      font-size: 11px;;
     color: gray;
     }
   
@@ -101,9 +101,6 @@ const GlobalStyle = createGlobalStyle`
   border: solid 1px #f2f2f2;
   margin: 5px;
 }
-
-
-
 
 .card-img {
   height: 141px;
