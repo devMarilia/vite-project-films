@@ -41,7 +41,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   .content-banner {
-    background-color: blue;
     height: 20vh;
     display: flex;
     justify-content: space-between;
@@ -62,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--color-primary) ;
   }
  
 
@@ -80,7 +78,6 @@ const GlobalStyle = createGlobalStyle`
   display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: #fff;  
     padding: 3px ;
 
    h3 {

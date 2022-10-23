@@ -7,6 +7,7 @@ export const NavbarConteiner = styled.header`
   margin: 0 auto;
   height: 50px;
   background: var(--background-primary);
+  border-bottom: 1px solid var(--background-mobile-menu);
 
   .logo {
     font-weight: 700;
