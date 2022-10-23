@@ -21,18 +21,17 @@ export const ContainerBannerDetails = styled.div`
       position: relative;
       top: 0;
       left: 0;
-      background-color: blue;
       height: 29rem;
 
       .image-details {
         height: 100%;
-        width: 100%;
+     
         display: flex;
         object-fit: cover;
       }
     }
     .content-datails-items {
-      padding: 0px 20px;
+      padding: 0px 40px;
       display: flex;
       align-items: center;
       color: #fff;
@@ -50,4 +49,22 @@ export const ContainerBannerDetails = styled.div`
       }
     }
   }
+  @media (max-width: 700px) {
+    height: 142vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center ;
+ 
+    .content-datails  {
+      flex-direction: column ;  
+
+      .content-datails-items-image {
+        justify-content: center;
+    display: flex;
+    align-items: center ;
+      }
+    }
+  }
+   
 `;
