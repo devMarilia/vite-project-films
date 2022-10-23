@@ -13,7 +13,7 @@ const BannerDetils = ({ dados }) => {
           <div className="items-datails">
             <h3>{dados.name}</h3>
             <span>10/15/2022</span>
-            <h3>Sinopse</h3>
+            <h4>Sinopse</h4>
             <article>{dados.description}</article>
           </div>
         </div>
