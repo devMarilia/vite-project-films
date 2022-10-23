@@ -5,8 +5,6 @@ import api from "../services/api";
 
 const Details = () => {
   let { id } = useParams();
-  // Todos os States com dados das API'S
-  const [banner, setBanner] = useState([]);
   const [films, setFilms] = useState([]);
 
   // Parte de consumo de API'S
@@ -18,17 +16,23 @@ const Details = () => {
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
-    }
-    if (id >= 201) {
+    } else if (id <= 400) {
       await api
         .get(`/comedia/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
+    } else if (id >= 401) {
+      await api
+        .get(`/documentario/${id}`)
+        .then((res) => setFilms(res.data))
+        .catch((error) => {
+          console.error("ops! ocorreu um erro " + error);
+        });
     }
   }
-  //console.log(films);
+
   useEffect(() => {
     getAll();
   }, [id]);
