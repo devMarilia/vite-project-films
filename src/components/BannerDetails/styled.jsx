@@ -21,6 +21,7 @@ export const ContainerBannerDetails = styled.div`
       top: 0;
       left: 0;
       background-color: blue;
+      height: 235px;
 
       .image-details {
         height: 100%;
