@@ -2,10 +2,11 @@ import React, { useState, useRef } from "react";
 import Text from "../Text";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { MovieRow } from "../Card/styled";
+import { Link } from "react-router-dom";
 
-export default ({ title, films }) => {
+export default ({ title, films, routes }) => {
   const [scrollX, setScrollX] = useState(0);
-
+  console.log(films);
   const handleLeftArrow = () => {
     let x = scrollX + Math.round(window.innerWidth / 2);
     if (x > 0) {
@@ -42,9 +43,11 @@ export default ({ title, films }) => {
             }}
           >
             {films.length > 0 &&
-              films.map((item, key) => (
-                <div key={key} className="movieRow-item">
-                  <img src={item.image} />
+              films.map((item) => (
+                <div key={item.id} className="movieRow-item">
+                  <Link to={"/detalhes/" + item.id}>
+                    <img src={item.image} />
+                  </Link>
                 </div>
               ))}
           </div>

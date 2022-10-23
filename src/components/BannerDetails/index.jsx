@@ -1,22 +1,19 @@
 import React from "react";
 import { ContainerBannerDetails } from "./styled";
 
-const BannerDetils = () => {
+const BannerDetils = ({ dados }) => {
   return (
     <ContainerBannerDetails>
       <div className="content-datails">
         <div className="content-datails-items-image">
-          <img
-            className="image-details"
-            src="https://media.news9live.com/h-upload/2022/09/13/556728-newproject-2022-09-13t154154371.webp"
-          />
+          <img className="image-details" src={dados.image} />
         </div>
         <div className="content-datails-items">
           <div>
-            <h3>Titulo</h3>
+            <h3>{dados.name}</h3>
             <span>10/15/2022</span>
             <h3>Sinopse</h3>
-            <article>teste teste teste </article>
+            <article>{dados.description}</article>
           </div>
         </div>
       </div>

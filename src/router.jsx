@@ -9,7 +9,7 @@ function MyRoutes() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/detalhes" element={<Details />} />
+      <Route path="/detalhes/:id" element={<Details />} />
       <Route path="/comedia" element={<Comedy />} />
     </Routes>
   );
