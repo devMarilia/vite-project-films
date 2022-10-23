@@ -82,9 +82,11 @@ const GlobalStyle = createGlobalStyle`
 
    h3 {
       font-size: 1rem;
+      color: #fff;
     }
   article {
       font-size: 13px;
+      color: #fff;
     }
 
    span {
@@ -103,6 +105,7 @@ const GlobalStyle = createGlobalStyle`
   height: 141px;
     width: 103px;
     object-fit: cover;
+    display: flex;
 }
 
 
