@@ -12,6 +12,7 @@ export const ContextProvider = ({ children }) => {
   const [banner, setBanner] = useState([]);
   const [films, setFilms] = useState([]);
   const [filmsComedia, setFilmsComedia] = useState([]);
+  const [documentario, setDocumentario] = useState([]);
 
   // Parte de consumo de API'S
   async function getAll() {
@@ -33,6 +34,12 @@ export const ContextProvider = ({ children }) => {
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
+    await api
+      .get(`/documentario`)
+      .then((res) => setDocumentario(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
   }
 
   const lis = [
@@ -44,6 +51,10 @@ export const ContextProvider = ({ children }) => {
       title: "Comédia",
       items: filmsComedia,
     },
+    {
+      title: "Documentários",
+      items: documentario,
+    },
   ];
 
   useEffect(() => {
@@ -53,6 +64,7 @@ export const ContextProvider = ({ children }) => {
   const value = {
     banner,
     lis,
+    filmsComedia,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
