@@ -13,7 +13,7 @@ export const ContainerFooter = styled.div`
     display: flex;
 
     > a {
-      font-size: 1rem ;
+      font-size: 13px ;
       color: var(--color-primary) ;
     }
 
