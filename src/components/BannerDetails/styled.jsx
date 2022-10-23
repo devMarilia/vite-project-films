@@ -25,7 +25,7 @@ export const ContainerBannerDetails = styled.div`
 
       .image-details {
         height: 100%;
-     
+        border-radius: 1rem;
         display: flex;
         object-fit: cover;
       }
