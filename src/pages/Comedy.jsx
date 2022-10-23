@@ -12,7 +12,7 @@ function Comedy() {
     <div className="container-pages">
       <div className="content-card-pages">
         <h1>Comédia</h1>
-        {filmsComedia.map((item, key) => {
+        {filmsComedia.map((item) => {
           return (
             <React.Fragment>
               <div className="content" key={item.id}>
