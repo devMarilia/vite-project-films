@@ -82,6 +82,7 @@ const GlobalStyle = createGlobalStyle`
 
    h3 {
       font-size: 1rem;
+      color: #fff;
     }
   article {
       font-size: 13px;
