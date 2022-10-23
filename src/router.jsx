@@ -2,13 +2,15 @@ import { Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Comedy from "./pages/Comedy";
+import Details from "./pages/Details";
 
 function MyRoutes() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/detalhes" element={<Details />} />
+      <Route path="/comedia" element={<Comedy />} />
     </Routes>
   );
 }

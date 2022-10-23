@@ -9,7 +9,7 @@ function Navbar() {
       <span className="logo">Mape Movies</span>
       <div className={`nav-items ${isOpen && "open"}`}>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <Link to="/comedia">Comedy</Link>
       </div>
       <div
         className={`nav-toggle ${isOpen && "open"}`}
