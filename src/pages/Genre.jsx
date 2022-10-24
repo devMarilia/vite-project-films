@@ -4,7 +4,7 @@ import { useAppContext } from "../AppContext/Contex";
 import List from "../components/ListCard";
 import Text from "../components/Text";
 
-function Comedy() {
+function Genre() {
   const { filmsComedia } = useAppContext();
 
   return (
@@ -42,4 +42,4 @@ function Comedy() {
     </div>
   );
 }
-export default Comedy;
+export default Genre;
