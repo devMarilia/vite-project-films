@@ -17,12 +17,10 @@ const Banner = () => {
 
   const nextSlide = () => {
     setSlider(slider === bannerLength - 1 ? 0 : slider + 1);
-    //console.log("next");
   };
 
   const prevSlide = () => {
     setSlider(slider === 0 ? bannerLength - 1 : slider - 1);
-    //console.log("prev");
   };
 
   function auto() {

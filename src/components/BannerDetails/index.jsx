@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ContainerBannerDetails } from "./styled";
 
 const BannerDetils = ({ dados }) => {
-  console.log(dados);
   return (
     <ContainerBannerDetails>
       <div className="content-datails">

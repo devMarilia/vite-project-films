@@ -64,7 +64,6 @@ export const ContextProvider = ({ children }) => {
   const value = {
     banner,
     lis,
-    comedia,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

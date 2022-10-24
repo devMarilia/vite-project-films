@@ -4,9 +4,9 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { MovieRow } from "../Card/styled";
 import { Link } from "react-router-dom";
 
-export default ({ title, films, routes }) => {
+export default ({ title, films }) => {
   const [scrollX, setScrollX] = useState(0);
-  console.log(films);
+
   const handleLeftArrow = () => {
     let x = scrollX + Math.round(window.innerWidth / 2);
     if (x > 0) {
