@@ -11,7 +11,7 @@ const Details = () => {
   async function getAll() {
     if (id < 200) {
       await api
-        .get(`/filmes/${id}`)
+        .get(`/acao/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);

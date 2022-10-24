@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     overflow: overlay;
-    background: #141414;
+    background: #05080e;
   }
 
   
