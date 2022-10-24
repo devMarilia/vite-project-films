@@ -10,7 +10,7 @@ function MyRoutes() {
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route path="/detalhes/:id" element={<Details />} />
-      <Route path="/genero" element={<Genre />} />
+      <Route path="/genero/:name" element={<Genre />} />
     </Routes>
   );
 }

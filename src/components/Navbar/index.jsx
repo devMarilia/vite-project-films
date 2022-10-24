@@ -48,12 +48,11 @@ function Navbar() {
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <Link to="/genero" className="nav-links" onClick={closeMobileMenu}>
-            Generos 
+          <Link className="nav-links" onClick={closeMobileMenu}>
+            filmes
           </Link>
           {dropdown && <Dropdown />}
         </li>
-      
       </ul>
     </NavbarConteiner>
   );
