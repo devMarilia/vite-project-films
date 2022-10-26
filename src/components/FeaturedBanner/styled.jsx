@@ -12,6 +12,7 @@ export const ContainerFeaturedBanner = styled.div`
     height: 73vh;
     background-color: white;
     border-radius: 5px;
+    
   }
 
   img {

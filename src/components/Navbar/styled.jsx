@@ -1,129 +1,147 @@
 import styled from "styled-components";
 
 export const NavbarConteiner = styled.header`
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  height: 50px;
-  background: var(--background-primary);
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--background-mobile-menu);
 
-  .logo {
-    font-weight: 700;
-    margin: 15px;
-    color: var(--text-color-primary);
-  }
-
-  .nav-items {
-    margin: 26px;
-  }
-
-  .nav-items a {
-    color: var(--text-color-primary);
-    font-size: 0.75rem;
+  .navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
     text-decoration: none;
-    margin: 15px;
-    position: relative;
-    opacity: 0.9;
-    &:hover {
-      opacity: 1;
-    }
+    font-size: 2rem;
   }
 
-  .nav-items a:hover {
-    opacity: 1;
+  .fa-firstdraft {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
   }
 
-  .nav-toggle {
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+
+  .nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links:hover {
+    background-color: var(--text-color-secondary);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }
+
+  .fa-bars {
+    color: #fff;
+  }
+
+  .nav-links-mobile {
     display: none;
   }
 
-  @media (max-width: 700px) {
-    border-bottom: 100%;
+  .menu-icon {
+    display: none;
+  }
 
-    .nav-items {
-      position: absolute;
-      top: 24px;
+  @media screen and (max-width: 960px) {
+    .NavbarItems {
+      position: relative;
+    }
+
+    .nav-menu {
       display: flex;
       flex-direction: column;
-      background: var(--background-primary);
-      backdrop-filter: blur(10px);
-      opacity: 0.9;
-      left: -29px;
       width: 100%;
-      height: 67%;
-      transform: translateX(-100%);
-      transition: all 0.45s;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+      background: #242222;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
       z-index: 1;
     }
 
-    .nav-items a {
-      align-items: center;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-color-primary);
-      opacity: 0.9;
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
     }
 
-    nav-items > a::before {
-      background: transparent;
+    .nav-links:hover {
+      border-radius: 0;
     }
 
-    .nav-items.open {
-      transform: translateX(0);
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
     }
 
-    .nav-toggle {
-      display: flex;
-      width: 50px;
-      height: 50px;
-      align-items: center;
-      justify-content: center;
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
       cursor: pointer;
     }
 
-    .nav-toggle > .bar {
-      position: relative;
-      width: 32px;
-      height: 2px;
-      background: var(--text-color-secondary);
-      transition: all 0.45s ease-in-out;
+    .fa-times {
+      color: #fff;
+      font-size: 2rem;
     }
 
-    .nav-toggle > .bar::before,
-    .nav-toggle > .bar::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background: var(--text-color-secondary);
-      border-radius: 2px;
-      transition: all 0.45s ease-in-out;
+    .nav-links-mobile {
+      display: block;
+      text-align: center;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      border-radius: 4px;
+      width: 80%;
+      background: #1888ff;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
     }
 
-    .nav-toggle .bar::before {
-      width: 25px;
-      transform: translateY(-8px);
-      right: 0;
+    .nav-links-mobile:hover {
+      background: #fff;
+      color: #1888ff;
+      transition: 250ms;
     }
 
-    .nav-toggle > .bar::after {
-      width: 32px;
-      transform: translateY(8px);
-    }
-
-    .nav-toggle.open > .bar {
-      transform: translateX(-40px);
-      background: transparent;
-    }
-
-    .nav-toggle.open > .bar::before {
-      width: 32px;
-      transform: rotate(45deg) translate(26px, -26px);
-    }
-
-    .nav-toggle.open > .bar::after {
-      transform: rotate(-45deg) translate(26px, 26px);
+    button {
+      display: none;
     }
   }
 `;
