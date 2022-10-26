@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarConteiner = styled.header`
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,14 @@ export const NavbarConteiner = styled.header`
     text-decoration: none;
     font-size: 2rem;
   }
+  .navbar-logo img {
+      width: 70px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 
   .fa-firstdraft {
     margin-left: 0.5rem;
@@ -101,10 +109,16 @@ export const NavbarConteiner = styled.header`
 
     .navbar-logo {
       position: absolute;
-      top: 0;
+      top: -30px;
       left: 0;
       transform: translate(25%, 50%);
     }
+    .navbar-logo img {
+    width: 66px;
+  
+  }
+
+  
 
     .menu-icon {
       display: block;

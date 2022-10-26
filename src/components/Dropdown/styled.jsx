@@ -4,7 +4,7 @@ export const ContainerDropdown = styled.div`
 .dropdown-menu {
   width: 200px;
   position: absolute;
-  top: 80px;
+  top: 70px;
   right: 7rem ;
   list-style: none;
   text-align: start;

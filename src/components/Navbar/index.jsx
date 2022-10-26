@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
 import { NavbarConteiner } from "./styled";
+import logo from "../../assets/images/logomp.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,10 @@ function Navbar() {
   return (
     <NavbarConteiner>
       <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-        MAPE
+        <div className="logo">
+        <img  src={logo} alt="logo mp filmes" />
+        <p>MP Flix</p>
+        </div>
       </Link>
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"} />
