@@ -23,9 +23,37 @@ const Details = () => {
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
-    } else if (id >= 401) {
+    } else if (id <= 600) {
       await api
         .get(`/documentario/${id}`)
+        .then((res) => setFilms(res.data))
+        .catch((error) => {
+          console.error("ops! ocorreu um erro " + error);
+        });
+    } else if (id <= 800) {
+      await api
+        .get(`/romance/${id}`)
+        .then((res) => setFilms(res.data))
+        .catch((error) => {
+          console.error("ops! ocorreu um erro " + error);
+        });
+    } else if (id <= 1000) {
+      await api
+        .get(`/animacao/${id}`)
+        .then((res) => setFilms(res.data))
+        .catch((error) => {
+          console.error("ops! ocorreu um erro " + error);
+        });
+    } else if (id <= 1200) {
+      await api
+        .get(`/crime/${id}`)
+        .then((res) => setFilms(res.data))
+        .catch((error) => {
+          console.error("ops! ocorreu um erro " + error);
+        });
+    } else if (id <= 1400) {
+      await api
+        .get(`/terror/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);

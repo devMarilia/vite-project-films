@@ -14,4 +14,24 @@ export const MenuItems = [
     path: "/genero/",
     cName: "dropdown-link",
   },
+  {
+    title: "Romance",
+    path: "/genero/",
+    cName: "dropdown-link",
+  },
+  {
+    title: "Animação",
+    path: "/genero/",
+    cName: "dropdown-link",
+  },
+  {
+    title: "Crime",
+    path: "/genero/",
+    cName: "dropdown-link",
+  },
+  {
+    title: "Terror",
+    path: "/genero/",
+    cName: "dropdown-link",
+  },
 ];

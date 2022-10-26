@@ -13,6 +13,10 @@ export const ContextProvider = ({ children }) => {
   const [acao, setAcao] = useState([]);
   const [comedia, setComedia] = useState([]);
   const [documentario, setDocumentario] = useState([]);
+  const [romance, setRomance] = useState([]);
+  const [animacao, setAnimacao] = useState([]);
+  const [crime, setCrime] = useState([]);
+  const [terror, setTerror] = useState([]);
 
   // Parte de consumo de API'S
   async function getAll() {
@@ -40,6 +44,30 @@ export const ContextProvider = ({ children }) => {
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
+    await api
+      .get(`/romance`)
+      .then((res) => setRomance(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get(`/animacao`)
+      .then((res) => setAnimacao(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get(`/crime`)
+      .then((res) => setCrime(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get(`/terror`)
+      .then((res) => setTerror(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
   }
 
   const lis = [
@@ -54,6 +82,22 @@ export const ContextProvider = ({ children }) => {
     {
       title: "Documentários",
       items: documentario,
+    },
+    {
+      title: "Romance",
+      items: romance,
+    },
+    {
+      title: "Animação",
+      items: animacao,
+    },
+    {
+      title: "Crime",
+      items: crime,
+    },
+    {
+      title: "Terror",
+      items: terror,
     },
   ];
 

@@ -13,19 +13,25 @@ function Genre() {
   async function getAll() {
     if (name === "Comédia") {
       await api.get(`/comedia`).then((res) => setFilms(res.data));
-      setFilmName("Comédia").catch((error) => {
-        console.error("ops! ocorreu um erro " + error);
-      });
+      setFilmName("Comédia");
     } else if (name === "Documentários") {
       await api.get(`/documentario`).then((res) => setFilms(res.data));
-      setFilmName("Documentários").catch((error) => {
-        console.error("ops! ocorreu um erro " + error);
-      });
+      setFilmName("Documentários");
     } else if (name === "Ação") {
       await api.get(`/acao`).then((res) => setFilms(res.data));
-      setFilmName("Ação").catch((error) => {
-        console.error("ops! ocorreu um erro " + error);
-      });
+      setFilmName("Ação");
+    } else if (name === "Romance") {
+      await api.get(`/romance`).then((res) => setFilms(res.data));
+      setFilmName("Romance");
+    } else if (name === "Animação") {
+      await api.get(`/animacao`).then((res) => setFilms(res.data));
+      setFilmName("Animação");
+    } else if (name === "Crime") {
+      await api.get(`/crime`).then((res) => setFilms(res.data));
+      setFilmName("Crime");
+    } else if (name === "Terror") {
+      await api.get(`/terror`).then((res) => setFilms(res.data));
+      setFilmName("Terror");
     }
   }
 
@@ -42,15 +48,10 @@ function Genre() {
       <div className="content-card-pages">
         {films.map((item, index) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={index}>
               <div className="content" key={item.id}>
                 <div className="card">
-                  <img
-                    src={item.image}
-                    alt={item.nome}
-                    className="card-img"
-                    key={index}
-                  />
+                  <img src={item.image} alt={item.nome} className="card-img" />
                 </div>
                 <div className="description-page" key={index}>
                   <div className="caption">
