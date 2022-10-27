@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
+import { MenuItems } from "../../services/menuItems";
 import { NavbarConteiner } from "./styled";
-import logo from "../../assets/images/logomp.png"
+import logo from "../../assets/images/logomp.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -57,7 +57,7 @@ function Navbar() {
   //         </Link>
   //         {/* {dropdown && <Dropdown />} */}
   //       </li>
-    
+
   //     </ul>
 
   //     <div className={`nav-toggle ${isOpen && "open"}`}
@@ -69,32 +69,42 @@ function Navbar() {
   //   </NavbarConteiner>
   return (
     <NavbarConteiner>
-        <span className="logo">
-        <img  src={logo} alt="logo mp filmes" />
-        </span>
-        <div className={`nav-items ${isOpen && "open"}`}>
+      <span className="logo">
+        <img src={logo} alt="logo mp filmes" />
+      </span>
+      <div className={`nav-items ${isOpen && "open"}`}>
         <li className="nav-item">
-          <Link to="/">
-            Home
-      </Link>
+          <Link to="/">Home</Link>
         </li>
+        {isOpen === true} 
         <li
-          className="nav-item"
+          className="nav-item film"
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <Link >
-            filmes
-          </Link>
+          <Link>filmes</Link>
           {dropdown && <Dropdown />}
         </li>
-        </div>
-        <div className={`nav-toggle ${isOpen && "open"}`}
-        onClick={() => setIsOpen(!isOpen)}>
-          <div className='bar'>
-            
-          </div>
-        </div>
+         {MenuItems.map((item, index) => {
+          return (
+            <li onClick={closeMobileMenu} key={index} className="menu-items-mobile">
+              <Link 
+              className={item.cName}
+              to={item.path + item.title}
+              onClick={() => setClick(false)}
+              >
+                {item.title}
+              </Link>
+            </li>
+          )
+        })}
+      </div>
+      <div
+        className={`nav-toggle ${isOpen && "open"}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="bar"></div>
+      </div>
     </NavbarConteiner>
   );
 }
