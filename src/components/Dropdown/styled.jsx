@@ -4,23 +4,19 @@ export const ContainerDropdown = styled.div`
 .dropdown-menu {
   width: 200px;
   position: absolute;
-  top: 70px;
-  right: 7rem ;
+  top: 83px;
+  right: 1rem ;
   list-style: none;
   text-align: start;
-  background: var(--background-mobile-menu);
+  background: #fff;
   z-index: 999 ;
 }
 
 .dropdown-menu li {
-  background: var(--background-mobile-menu);
+  background: #fff;
   cursor: pointer;
 }
 
-.dropdown-menu li:hover {
-  background: var(--text-color-secondary);
-  
-}
 
 .dropdown-menu.clicked {
   display: none;
