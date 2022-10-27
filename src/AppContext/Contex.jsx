@@ -10,9 +10,13 @@ export const useAppContext = () => {
 export const ContextProvider = ({ children }) => {
   // Todos os States com dados das API'S
   const [banner, setBanner] = useState([]);
-  const [films, setFilms] = useState([]);
-  const [filmsComedia, setFilmsComedia] = useState([]);
+  const [acao, setAcao] = useState([]);
+  const [comedia, setComedia] = useState([]);
   const [documentario, setDocumentario] = useState([]);
+  const [romance, setRomance] = useState([]);
+  const [animacao, setAnimacao] = useState([]);
+  const [crime, setCrime] = useState([]);
+  const [terror, setTerror] = useState([]);
 
   // Parte de consumo de API'S
   async function getAll() {
@@ -23,14 +27,14 @@ export const ContextProvider = ({ children }) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get("/filmes")
-      .then((res) => setFilms(res.data))
+      .get("/acao")
+      .then((res) => setAcao(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
       .get(`/comedia`)
-      .then((res) => setFilmsComedia(res.data))
+      .then((res) => setComedia(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
@@ -40,20 +44,60 @@ export const ContextProvider = ({ children }) => {
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
+    await api
+      .get(`/romance`)
+      .then((res) => setRomance(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get(`/animacao`)
+      .then((res) => setAnimacao(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get(`/crime`)
+      .then((res) => setCrime(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get(`/terror`)
+      .then((res) => setTerror(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
   }
 
   const lis = [
     {
-      title: "Novidades",
-      items: films,
+      title: "Ação",
+      items: acao,
     },
     {
       title: "Comédia",
-      items: filmsComedia,
+      items: comedia,
     },
     {
       title: "Documentários",
       items: documentario,
+    },
+    {
+      title: "Romance",
+      items: romance,
+    },
+    {
+      title: "Animação",
+      items: animacao,
+    },
+    {
+      title: "Crime",
+      items: crime,
+    },
+    {
+      title: "Terror",
+      items: terror,
     },
   ];
 
@@ -64,7 +108,6 @@ export const ContextProvider = ({ children }) => {
   const value = {
     banner,
     lis,
-    filmsComedia,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

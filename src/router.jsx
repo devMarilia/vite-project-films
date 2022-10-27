@@ -2,15 +2,15 @@ import { Routes, Route } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
-import Comedy from "./pages/Comedy";
 import Details from "./pages/Details";
+import Genre from "./pages/Genre";
 
 function MyRoutes() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/detalhes" element={<Details />} />
-      <Route path="/comedia" element={<Comedy />} />
+      <Route path="/detalhes/:id" element={<Details />} />
+      <Route path="/genero/:name" element={<Genre />} />
     </Routes>
   );
 }

@@ -7,9 +7,9 @@ function Card() {
 
   return (
     <div>
-      {lis.map((item) => {
+      {lis.map((item, index) => {
         return (
-          <div key={item.id}>
+          <div key={index}>
             <List title={item.title} films={item.items} />
           </div>
         );

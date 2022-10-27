@@ -21,6 +21,7 @@ export const MovieRow = styled.div`
 
   .movieRow-item img {
     width: 100%;
+    height: 13rem;
     transform: scale(0.9);
     transition: all ease 0.2s;
   }
