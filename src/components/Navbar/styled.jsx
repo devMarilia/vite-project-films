@@ -8,12 +8,14 @@ padding: 20px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary);
+  border-bottom: 1px solid var(--background-mobile-menu);
   .logo {
     padding-top:10px;
 
     > img {
-      width: 100px;
-      height: 6rem;
+      width: 90px;
+    height: 5rem;
+
     }
   }
 
