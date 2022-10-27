@@ -76,7 +76,6 @@ function Navbar() {
         <li className="nav-item">
           <Link to="/">Home</Link>
         </li>
-        {isOpen === true} 
         <li
           className="nav-item film"
           onMouseEnter={onMouseEnter}
@@ -87,11 +86,11 @@ function Navbar() {
         </li>
          {MenuItems.map((item, index) => {
           return (
-            <li onClick={closeMobileMenu} key={index} className="menu-items-mobile">
+            <li  key={index} className="menu-items-mobile"onClick={() => setIsOpen(!isOpen)}>
               <Link 
               className={item.cName}
               to={item.path + item.title}
-              onClick={() => setClick(false)}
+              onClick={() => setIsOpen(isOpen)}
               >
                 {item.title}
               </Link>
