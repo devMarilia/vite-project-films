@@ -29,44 +29,6 @@ function Navbar() {
     }
   };
 
-  // return (
-  //   <NavbarConteiner>
-  //     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-  //       <div className="logo">
-  //       <img  src={logo} alt="logo mp filmes" />
-  //       <p>MP Flix</p>
-  //       </div>
-  //     </Link>
-  //     <div className="menu-icon" onClick={handleClick}>
-  //       <i className={click ? "fas fa-times" : "fas fa-bars"} />
-  //     </div>
-
-  //     <ul className={click ? "nav-menu active" : "nav-menu"}>
-  //       <li className="nav-item">
-  //         <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-  //           Home
-  //         </Link>
-  //       </li>
-  //       <li
-  //         className="nav-item"
-  //         onMouseEnter={onMouseEnter}
-  //         onMouseLeave={onMouseLeave}
-  //       >
-  //         <Link className="nav-links" onClick={closeMobileMenu}>
-  //           filmes
-  //         </Link>
-  //         {/* {dropdown && <Dropdown />} */}
-  //       </li>
-
-  //     </ul>
-
-  //     <div className={`nav-toggle ${isOpen && "open"}`}
-  //       onClick={() => setIsOpen(!isOpen)}>
-  //         <div className='bar'>
-
-  //         </div>
-  //       </div>
-  //   </NavbarConteiner>
   return (
     <NavbarConteiner>
       <span className="logo">

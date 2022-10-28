@@ -1,71 +1,78 @@
 import React from "react";
-import {
-  AiFillFacebook,
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-} from "react-icons/ai";
-import { ContainerFooter, ContentFooter } from "./styled";
+import { Link } from "react-router-dom";
+
+import { ContainerFooter, ContentFooter, ContainerRealized } from "./styled";
 
 const Footer = () => {
   return (
-    <ContainerFooter>
-      <ContentFooter>
-       
-        <div className="list">
-   
-
-          <ul>
-            <li>
-              <a href="https://www.google.com">Google</a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com">Facebook</a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com">Facebook</a>
-            </li>
-          </ul>
-        </div>
-        <div className="list">
-          <ul>
-            <li>
-              <a href="https://www.google.com">Google</a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com">Facebook</a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com">Facebook</a>
-            </li>
-          </ul>
-        </div>
-        <div className="list">
-          <ul>
-            <li>
-              <a href="https://www.google.com">Google</a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com">Facebook</a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com">Facebook</a>
-            </li>
-          </ul>
-        </div>
-      </ContentFooter>
-      <div className="icon-rede-social">
-          <a>
-            <AiFillGithub />
+    <>
+      <ContainerFooter>
+        <ContentFooter>
+          <div className="list">
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Ação</Link>
+              </li>
+              <li>
+                <Link to="/">Comédia</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="list">
+            <ul>
+              <li>
+                <Link to="/">Documentários</Link>
+              </li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Romance</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="list">
+            <ul>
+              <li>
+                <Link to="/">Animação</Link>
+              </li>
+              <li>
+                <Link to="/">Crime</Link>
+              </li>
+              <li>
+                <Link to="/">Terror</Link>
+              </li>
+            </ul>
+          </div>
+        </ContentFooter>
+      </ContainerFooter>
+      <ContainerRealized>
+        <p>Feito por:</p>
+        <div>
+          <a
+            href="https://github.com/devMarilia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pedro
           </a>
-          <a href="https://">
-            <AiFillInstagram />
-          </a>
-          <a href="https://">
-            <AiFillLinkedin />
+          <p>
+          &
+          </p>
+         
+          <a
+            href="https://github.com/devMarilia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            devLia
           </a>
         </div>
-    </ContainerFooter>
+      </ContainerRealized>
+    </>
   );
 };
 
