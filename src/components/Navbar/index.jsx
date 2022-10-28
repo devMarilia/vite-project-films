@@ -73,7 +73,7 @@ function Navbar() {
         <img src={logo} alt="logo mp filmes" />
       </span>
       <div className={`nav-items ${isOpen && "open"}`}>
-        <li className="nav-item">
+        <li className="nav-item nav-item-li-web">
           <Link to="/">Home</Link>
         </li>
         <li
@@ -84,9 +84,13 @@ function Navbar() {
           <Link>filmes</Link>
           {dropdown && <Dropdown />}
         </li>
-         {MenuItems.map((item, index) => {
+        <div className="menu-items-mobile"onClick={() => setIsOpen(!isOpen)}>
+         <li>
+         <Link className='item-li-mobile'>Home</Link>
+         </li>
+        {MenuItems.map((item, index) => {
           return (
-            <li  key={index} className="menu-items-mobile"onClick={() => setIsOpen(!isOpen)}>
+            <li  key={index} className='item-li-mobile'>
               <Link 
               className={item.cName}
               to={item.path + item.title}
@@ -97,6 +101,8 @@ function Navbar() {
             </li>
           )
         })}
+        </div>
+         
       </div>
       <div
         className={`nav-toggle ${isOpen && "open"}`}

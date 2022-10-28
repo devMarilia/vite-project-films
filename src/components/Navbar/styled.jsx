@@ -144,5 +144,11 @@ export const NavbarConteiner = styled.header`
     .menu-items-mobile{
       padding: 10px 0;
     }
+    .nav-item-li-web {
+      display: none ;
+    }
+    .item-li-mobile{
+      padding: 0.5rem ;
+    }
   }
 `;
