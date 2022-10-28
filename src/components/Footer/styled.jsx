@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.div`
   width: 100%;
+  height: 10rem ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,6 +38,11 @@ export const ContentFooter = styled.div`
 
   .list {
     flex-wrap: wrap;
+ 
+
+    li {
+      padding: 0.25rem ;
+    }
   
   }
   a {
@@ -48,11 +54,44 @@ export const ContentFooter = styled.div`
     color: var(--text-color-secondary);
     text-decoration: none;
 
-    font-size: 0.5rem;
-    line-height: 1rem;
+    font-size: 1rem;
 
     &:hover {
       text-decoration: underline;
     }
+  
   }
 `;
+export const ContainerRealized = styled.div`
+  width: 100% ;
+  height: 3rem ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center ;
+
+  > p {
+    color: #fff ;
+  }
+
+  div {
+
+    width: 7rem;
+    display: flex;
+    justify-content: space-between;
+
+    ul > li {
+      display: flex;
+
+      
+    }
+    > p {
+      color: var(--text-color-secondary);
+    }
+    > a  {
+        color: var(--text-color-secondary);
+      }
+  }
+
+
+`
