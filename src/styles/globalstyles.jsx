@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px ;
+    padding: 36px ;
 
     > span {
       font-size: 1rem;
@@ -65,17 +65,17 @@ const GlobalStyle = createGlobalStyle`
  
 
 .content {
-  width: 80% ;
-  display: flex;
+    width: 80% ;
+    display: flex;
     margin: 1rem;
     border: solid 1px #f2f2f2;
     border-radius: 3px;
     box-shadow: 4px 5px 5px grey;
-  margin: 5px;
+    margin: 15px;
     
 }
 .description-page {
-  display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 3px ;
