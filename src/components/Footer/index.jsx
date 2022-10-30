@@ -59,10 +59,8 @@ const Footer = () => {
           >
             Pedro
           </a>
-          <p>
-          &
-          </p>
-         
+          <p>&</p>
+
           <a
             href="https://github.com/devMarilia"
             target="_blank"
