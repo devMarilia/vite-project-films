@@ -21,49 +21,49 @@ export const ContextProvider = ({ children }) => {
   // Parte de consumo de API'S
   async function getAll() {
     await api
-      .get("/banner")
+      .get("/api/banner")
       .then((res) => setBanner(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get("/acao")
+      .get("/api/acao")
       .then((res) => setAcao(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get(`/comedia`)
+      .get(`/api/comedia`)
       .then((res) => setComedia(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get(`/documentario`)
+      .get(`/api/documentario`)
       .then((res) => setDocumentario(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get(`/romance`)
+      .get(`/api/romance`)
       .then((res) => setRomance(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get(`/animacao`)
+      .get(`/api/animacao`)
       .then((res) => setAnimacao(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get(`/crime`)
+      .get(`/api/crime`)
       .then((res) => setCrime(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
     await api
-      .get(`/terror`)
+      .get(`/api/terror`)
       .then((res) => setTerror(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);

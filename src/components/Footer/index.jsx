@@ -53,16 +53,14 @@ const Footer = () => {
         <p>Feito por:</p>
         <div>
           <a
-            href="https://github.com/devMarilia"
+            href="https://github.com/Peedrohenrique"
             target="_blank"
             rel="noopener noreferrer"
           >
             Pedro
           </a>
-          <p>
-          &
-          </p>
-         
+          <p>&</p>
+
           <a
             href="https://github.com/devMarilia"
             target="_blank"

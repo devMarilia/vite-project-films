@@ -11,49 +11,49 @@ const Details = () => {
   async function getAll() {
     if (id < 200) {
       await api
-        .get(`/acao/${id}`)
+        .get(`/api/acao/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
     } else if (id <= 400) {
       await api
-        .get(`/comedia/${id}`)
+        .get(`/api/comedia/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
     } else if (id <= 600) {
       await api
-        .get(`/documentario/${id}`)
+        .get(`/api/documentario/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
     } else if (id <= 800) {
       await api
-        .get(`/romance/${id}`)
+        .get(`/api/romance/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
     } else if (id <= 1000) {
       await api
-        .get(`/animacao/${id}`)
+        .get(`/api/animacao/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
     } else if (id <= 1200) {
       await api
-        .get(`/crime/${id}`)
+        .get(`/api/crime/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
         });
     } else if (id <= 1400) {
       await api
-        .get(`/terror/${id}`)
+        .get(`/api/terror/${id}`)
         .then((res) => setFilms(res.data))
         .catch((error) => {
           console.error("ops! ocorreu um erro " + error);
