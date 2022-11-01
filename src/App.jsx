@@ -11,7 +11,7 @@ function App() {
         <GlobalStyle />
         <Navbar />
         <MyRoutes />
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
