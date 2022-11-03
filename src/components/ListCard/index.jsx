@@ -1,22 +1,22 @@
-import React, { useState, useRef } from "react";
+import React, { useState, memo } from "react";
 import Text from "../Text";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { MovieRow } from "../Card/styled";
 import { Link } from "react-router-dom";
 
-export default ({ title, films }) => {
+function List({ title, films }) {
   const [scrollX, setScrollX] = useState(0);
 
   const handleLeftArrow = () => {
-    let x = scrollX + Math.round(window.innerWidth / 2);
+    let x = scrollX + Math.round(window.innerWidth / 5);
     if (x > 0) {
       x = 0;
     }
     setScrollX(x);
   };
   const handleRightArrow = () => {
-    let x = scrollX - Math.round(window.innerWidth / 2);
-    let listW = films.length * 150;
+    let x = scrollX - Math.round(window.innerWidth / 5);
+    let listW = films.length * 142;
     if (window.innerWidth - listW > x) {
       x = window.innerWidth - listW - 60;
     }
@@ -63,4 +63,6 @@ export default ({ title, films }) => {
       )}
     </MovieRow>
   );
-};
+}
+
+export default memo(List);

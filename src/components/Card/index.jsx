@@ -1,10 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { useAppContext } from "../../AppContext/Contex";
 import List from "../ListCard";
 
 function Card() {
   const { lis } = useAppContext();
-
   return (
     <div>
       {lis.map((item, index) => {
@@ -18,4 +17,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default memo(Card);

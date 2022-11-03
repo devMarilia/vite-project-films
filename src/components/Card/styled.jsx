@@ -24,6 +24,7 @@ export const MovieRow = styled.div`
     height: 13rem;
     transform: scale(0.9);
     transition: all ease 0.2s;
+    border-radius: 4px;
   }
 
   .movieRow-item img:hover {

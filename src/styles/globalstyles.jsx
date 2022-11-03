@@ -51,7 +51,8 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1rem;
     line-height: 1rem;
     font-weight: 400;
-    color: var(--text-color-secondary);
+    color: white;
+    
     }
   }
   .content-card-pages {

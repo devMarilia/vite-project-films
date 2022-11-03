@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { MenuItems } from "../../services/menuItems";
 import { Link } from "react-router-dom";
 import { ContainerDropdown } from "./styled";
@@ -32,4 +32,4 @@ function Dropdown() {
   );
 }
 
-export default Dropdown;
+export default memo(Dropdown);

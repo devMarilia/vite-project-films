@@ -46,25 +46,24 @@ function Navbar() {
           <Link>filmes</Link>
           {dropdown && <Dropdown />}
         </li>
-        <div className="menu-items-mobile"onClick={() => setIsOpen(!isOpen)}>
-         <li>
-         <Link className='item-li-mobile'>Home</Link>
-         </li>
-        {MenuItems.map((item, index) => {
-          return (
-            <li  key={index} className='item-li-mobile'>
-              <Link 
-              className={item.cName}
-              to={item.path + item.title}
-              onClick={() => setIsOpen(isOpen)}
-              >
-                {item.title}
-              </Link>
-            </li>
-          )
-        })}
+        <div className="menu-items-mobile" onClick={() => setIsOpen(!isOpen)}>
+          <li>
+            <Link className="item-li-mobile">Home</Link>
+          </li>
+          {MenuItems.map((item, index) => {
+            return (
+              <li key={index} className="item-li-mobile">
+                <Link
+                  className={item.cName}
+                  to={item.path + item.title}
+                  onClick={() => setIsOpen(isOpen)}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
         </div>
-         
       </div>
       <div
         className={`nav-toggle ${isOpen && "open"}`}

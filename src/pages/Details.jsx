@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import BannerDetils from "../components/BannerDetails";
 import { useParams } from "react-router-dom";
 import api from "../services/api";
@@ -64,7 +64,6 @@ const Details = () => {
   useEffect(() => {
     getAll();
   }, [id]);
-
   return (
     <>
       <BannerDetils dados={films} />
@@ -72,4 +71,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default memo(Details);

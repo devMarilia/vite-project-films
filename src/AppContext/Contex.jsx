@@ -1,4 +1,11 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+  memo,
+} from "react";
 import api from "../services/api";
 
 const AppContext = createContext();
@@ -10,6 +17,7 @@ export const useAppContext = () => {
 export const ContextProvider = ({ children }) => {
   // Todos os States com dados das API'S
   const [banner, setBanner] = useState([]);
+  const [emAlta, setEmalta] = useState([]);
   const [acao, setAcao] = useState([]);
   const [comedia, setComedia] = useState([]);
   const [documentario, setDocumentario] = useState([]);
@@ -23,6 +31,12 @@ export const ContextProvider = ({ children }) => {
     await api
       .get("/api/banner")
       .then((res) => setBanner(res.data))
+      .catch((error) => {
+        console.error("ops! ocorreu um erro " + error);
+      });
+    await api
+      .get("/api/emAlta")
+      .then((res) => setEmalta(res.data))
       .catch((error) => {
         console.error("ops! ocorreu um erro " + error);
       });
@@ -70,7 +84,15 @@ export const ContextProvider = ({ children }) => {
       });
   }
 
+  useEffect(() => {
+    getAll();
+  }, []);
+
   const lis = [
+    {
+      title: "Em Alta",
+      items: emAlta,
+    },
     {
       title: "Ação",
       items: acao,
@@ -101,10 +123,6 @@ export const ContextProvider = ({ children }) => {
     },
   ];
 
-  useEffect(() => {
-    getAll();
-  }, []);
-
   const value = {
     banner,
     lis,
@@ -112,4 +130,4 @@ export const ContextProvider = ({ children }) => {
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
-export default AppContext;
+export default memo(AppContext);

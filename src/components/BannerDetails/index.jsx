@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { ContainerBannerDetails } from "./styled";
 
@@ -14,11 +14,10 @@ const BannerDetils = ({ dados }) => {
         <div className="content-datails-items">
           <div className="items-datails">
             <h3>{dados.name}</h3>
-            <span>10/15/2022</span>
-            <div className="sinopse">
-              <h4>Sinopse</h4>
-              <article>{dados.description}</article>
-            </div>
+            <span className="cordoano">{dados.year}</span>
+
+            <h4 className="sinopse">Sinopse</h4>
+            <article className="artigo">{dados.description}</article>
           </div>
         </div>
       </div>
@@ -26,4 +25,4 @@ const BannerDetils = ({ dados }) => {
   );
 };
 
-export default BannerDetils;
+export default memo(BannerDetils);

@@ -48,8 +48,17 @@ export const ContainerBannerDetails = styled.div`
         h3 {
           font-size: 2rem;
         }
-
-        sinopse {
+        .cordoano {
+          white-space: nowrap;
+          color: #808080;
+          margin-bottom: 3rem;
+        }
+        .sinopse {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .artigo {
+          color: #808080;
         }
       }
     }
