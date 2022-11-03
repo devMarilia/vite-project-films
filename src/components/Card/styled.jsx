@@ -34,9 +34,9 @@ export const MovieRow = styled.div`
   .movieRow-left,
   .movieRow-right {
     position: absolute;
-    width: 40px;
-    height: 225px;
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 43px;
+    height: 196px;
+    background-color: rgb(70 65 65 / 60%);
     z-index: 99;
     display: flex;
     align-items: center;
