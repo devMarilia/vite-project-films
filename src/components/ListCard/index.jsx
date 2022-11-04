@@ -8,14 +8,14 @@ function List({ title, films }) {
   const [scrollX, setScrollX] = useState(0);
 
   const handleLeftArrow = () => {
-    let x = scrollX + Math.round(window.innerWidth / 5);
+    let x = scrollX + Math.round(window.innerWidth / 2);
     if (x > 0) {
       x = 0;
     }
     setScrollX(x);
   };
   const handleRightArrow = () => {
-    let x = scrollX - Math.round(window.innerWidth / 5);
+    let x = scrollX - Math.round(window.innerWidth / 2);
     let listW = films.length * 142;
     if (window.innerWidth - listW > x) {
       x = window.innerWidth - listW - 60;

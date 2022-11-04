@@ -48,7 +48,9 @@ function Navbar() {
         </li>
         <div className="menu-items-mobile" onClick={() => setIsOpen(!isOpen)}>
           <li>
-            <Link className="item-li-mobile">Home</Link>
+            <Link to="/" className="item-li-mobile">
+              Home
+            </Link>
           </li>
           {MenuItems.map((item, index) => {
             return (

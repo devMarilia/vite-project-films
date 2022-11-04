@@ -6,6 +6,13 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
 
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 19vh;
+    position: relative;
+    overflow: hidden;
+  }
+
   .imageSlide {
     position: absolute;
     top: 0;
@@ -19,8 +26,8 @@ export const Container = styled.div`
     position: absolute;
     top: -5;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 92%;
     opacity: 0;
     transform: translateX(-0%);
     transition: all 60s ease;
@@ -116,3 +123,5 @@ export const Container = styled.div`
     width: 50%;
   }
 `;
+
+// @media (max-width: 700px)

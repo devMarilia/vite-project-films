@@ -68,7 +68,7 @@ export const NavbarConteiner = styled.header`
   }
   @media (max-width: 700px) {
     border-bottom: 100%;
-    padding: 20px ;
+    padding: 20px;
     .nav-items {
       position: absolute;
       top: 90px;
@@ -83,7 +83,7 @@ export const NavbarConteiner = styled.header`
       transition: all 0.45s;
     }
     .nav-item {
-      height: 34px ;
+      height: 34px;
     }
     nav-items > a::before {
       background: transparent;
@@ -138,17 +138,17 @@ export const NavbarConteiner = styled.header`
     .menu-items-mobile {
       display: block;
     }
-    .film{
-      display:none;
+    .film {
+      display: none;
     }
-    .menu-items-mobile{
+    .menu-items-mobile {
       padding: 10px 0;
     }
     .nav-item-li-web {
-      display: none ;
+      display: none;
     }
-    .item-li-mobile{
-      padding: 0.5rem ;
+    .item-li-mobile {
+      padding: 0.5rem;
     }
   }
 `;
